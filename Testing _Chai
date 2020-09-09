@@ -1,1 +1,48 @@
+The Basics
+Install Chai in node, the browser, and other environments. Learn about styles that you can use to define assertions.
 
+
+Asser
+The assert style is exposed through assert interface. This provides the classic assert-dot notation, similar to that packaged with node.js. This assert module, however, provides several additional tests and is browser compatible.
+
+var assert = require('chai').assert
+  , foo = 'bar'
+  , beverages = { tea: [ 'chai', 'matcha', 'oolong' ] };
+
+assert.typeOf(foo, 'string'); // without optional message
+assert.typeOf(foo, 'string', 'foo is a string'); // with optional message
+assert.equal(foo, 'bar', 'foo equal `bar`');
+assert.lengthOf(foo, 3, 'foo`s value has a length of 3');
+assert.lengthOf(beverages.tea, 3, 'beverages has 3 types of tea');
+
+In all cases, the assert style allows you to include an optional message as the last parameter in the assert statement. These will be included in the error messages should your assertion not pass.
+
+
+BDD
+
+
+The BDD style comes in two flavors: expect and should. Both use the same chainable language to construct assertions, but they differ in the way an assertion is initially constructed. 
+
+Should
+The should style allows for the same chainable assertions as the expect interface, however it extends each object with a should property to start your chain. This style has some issues when used with Internet Explorer, so be aware of browser compatibility.
+
+Differences
+First of all, notice that the expect require is just a reference to the expect function, whereas with the should require, the function is being executed.
+
+The expect interface provides a function as a starting point for chaining your language assertions. It works on node.js and in all browsers.
+
+The should interface extends Object.prototype to provide a single getter as the starting point for your language assertions. It works on node.js and in all modern browsers except Internet Explorer  
+
+
+
+Testing Asynchronous Function (callback)
+While testing callback function, the only major difference is, we need to tell Mocha that the test is complete because of async nature of function under test. In the below example, Mocha waits for the done() function to be get called to complete the test.
+
+
+Hooks like beforeEach and afterEach
+Few steps or code we might want to execute before or after each test to either setup preconditions before test or cleanup after test. so those code can be put inside beforeEach() and afterEach() methods.
+It is always good practice to have named function or description to hooks, which helps to identify errors quickly in tests.
+
+URLs:
+
+https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai
