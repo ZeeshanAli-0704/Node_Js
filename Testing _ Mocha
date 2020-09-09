@@ -1,0 +1,78 @@
+RUN CYCLE OVERVIEW
+A brief outline on the order Mocha’s components are executed. Worth noting that all hooks, describe and it callbacks are run in the order they are defined (i.e. found in the file).
+
+run 'mocha spec.js'
+|
+spawn child process
+|
+|--------------> inside child process
+  process and apply options
+  |
+  run spec file/s
+  |
+  |--------------> per spec file
+    suite callbacks (e.g., 'describe')
+    |
+    'before' root-level pre-hook
+    |
+    'before' pre-hook
+    |
+    |--------------> per test
+      'beforeEach' root-level pre-hook
+      |
+      'beforeEach' pre-hook
+      |
+      test callbacks (e.g., 'it')
+      |
+      'afterEach' post-hook
+      |
+      'afterEach' root-level post-hook
+    |<-------------- per test end
+    |
+    'after' post-hook
+    |
+    'after' root-level post-hooks
+  |<-------------- per spec file end
+|<-------------- inside child process end
+
+
+
+
+ASYNCHRONOUS CODE
+By adding an argument (usually named done) to it() to a test callback, Mocha will know that it should wait for this function to be called to complete the test. This callback accepts both an Error instance (or subclass thereof) or a falsy value; anything else is invalid usage and throws an error (usually causing a failed test).
+
+
+In Mocha v3.0.0 and newer, returning a Promise and calling done() will result in an exception, as this is generally a mistake
+
+Inclusive test / Exclusive Test 
+
+RETRY TESTS   You can choose to retry failed tests up to a certain number of times. This feature is designed to handle end-to-end tests (functional tests/Selenium…) where resources cannot be easily mocked/stubbed. It’s not recommended to use this feature for unit tests.
+
+This feature does re-run a failed test and its corresponding beforeEach/afterEach hooks, but not before/after hooks. this.retries() has no effect on failing hooks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
