@@ -43,6 +43,44 @@ Hooks like beforeEach and afterEach
 Few steps or code we might want to execute before or after each test to either setup preconditions before test or cleanup after test. so those code can be put inside beforeEach() and afterEach() methods.
 It is always good practice to have named function or description to hooks, which helps to identify errors quickly in tests.
 
+// Difference in assertion
+
+
+The three interfaces present different styles of performing assertions. Ultimately, they perform the same task. Some users prefer one style over the other. This being said, there are also a couple technical considerations worth highlighting:
+
+The assert and expect interfaces do not modify Object.prototype, whereas should does. So they are a better choice in an environment where you cannot or do not want to change Object.prototype.
+
+The assert and expect interfaces support custom messages just about everywhere. For instance:
+
+assert.isTrue(foo, "foo should be true");
+expect(foo, "foo should be true").to.be.true;
+The message "foo should be true" will be output together with the failed assertion if the assertion fails. You don't get the opportunity to set a custom message with the should interface.
+
+The differences are documented there.
+
+The three interfaces present different styles of performing assertions. Ultimately, they perform the same task. Some users prefer one style over the other. This being said, there are also a couple technical considerations worth highlighting:
+
+The assert and expect interfaces do not modify Object.prototype, whereas should does. So they are a better choice in an environment where you cannot or do not want to change Object.prototype.
+
+The assert and expect interfaces support custom messages just about everywhere. For instance:
+
+assert.isTrue(foo, "foo should be true");
+expect(foo, "foo should be true").to.be.true;
+The message "foo should be true" will be output together with the failed assertion if the assertion fails. You don't get the opportunity to set a custom message with the should interface.
+
+(Historical note: for a long time this answer stated that to get a custom message with expect, you'd have to use a workaround. Aurélien Ribon informed me that passing a message to expect as a second parameter works. Consequently, there is no need for a workaround. I've not been able to find which version of Mocha started providing support for this message, nor have I been able to find which version of the documentation documented it for the first time.)
+
+Note that assert.isTrue(foo), expect(foo).to.be.true and foo.should.be.true all output the following if you do not use a custom message, and foo === 1:
+
+    AssertionError: expected 1 to be true
+So while the expect and should interface are nicer to read, it is not like one interface is more naturally informative than the other when an assertion fails. This message, which is identical for all three interfaces, does not tell you what exactly you were testing, only that the value you got was 1 but you wanted true. If you want to know what you were testing, you need to add a message.
+
+The expect interface provides a function as a starting point for chaining your language assertions. It works on node.js and in all browsers.
+
+The should interface extends Object.prototype to provide a single getter as the starting point for your language assertions. It works on node.js and in all modern browsers except Internet Explorer.
+
 URLs:
 
 https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai
+https://devhints.io/chai 
+https://javascript.info/testing-mocha#behavior-driven-development-bdd
