@@ -1,0 +1,42 @@
+Jasmine is one of the most popular tools for a JavaScript developer to deal with hectic testing process. It is an open source technology. It is a simple API to test different components of JavaScript. This tutorial discusses the basic functionalities of Jasmine.js along with relevant examples for easy understanding.
+
+
+Jasmine is an open-source JavaScript framework, capable of testing any kind of JavaScript application. Jasmine follows Behavior Driven Development (BDD) procedure to ensure that each line of JavaScript statement is properly unit tested. By following BDD procedure, Jasmine provides a small syntax to test the smallest unit of the entire application instead of testing it as a whole.  
+
+Following are the advantages of using Jasmine over other available JavaScript testing frameworks −
+
+Jasmine does not depend on any other JavaScript framework.
+
+Jasmine does not require any DOM.
+
+All the syntax used in Jasmine framework is clean and obvious.
+
+Jasmine is heavily influenced by Rspec, JS Spec, and Jspec.
+
+Jasmine is an open-source framework and easily available in different versions like stand-alone, ruby gem, Node.js, etc.
+
+Matchers are the JavaScript function that does a Boolean comparison between an actual output and an expected output. There are two type of matchers Inbuilt matcher and Custom matchers.
+
+
+Jasmine has test double functions called spies. A spy can stub any function and tracks calls to it and all arguments. A spy only exists in the describe or it block in which it is defined, and will be removed after each spec. There are special matchers for interacting with spies.
+
+describe("A spy", function() {
+  var foo, bar = null;
+
+  beforeEach(function() {
+    foo = {
+      setBar: function(value) {
+        bar = value;
+      }
+    };
+¶
+You can define what the spy will do when invoked with and.
+
+
+URLs:
+https://www.softwaretestinghelp.com/jasmine-framework-tutorial/
+https://www.softwaretestinghelp.com/jasmine-framework-tutorial/
+https://www.softwaretestinghelp.com/karma-test-runner-tutorial/
+https://www.softwaretestinghelp.com/tdd-vs-bdd/
+
+
