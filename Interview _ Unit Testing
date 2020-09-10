@@ -1,0 +1,56 @@
+Chai
+
+What is chai?
+What is TDD / BDD ?
+What are assertions styles ?
+What are plugin ? Example ?
+Difference between Assertion Style.. ?
+Which assertion style is prefered  & why ?
+
+Mocha
+
+what is Mocha ?
+Why Mocha ? https://www.mindk.com/blog/javascript-testing-framework/
+Types of Option available ? JavaScript, like any other programming language, has a number of tools that allow test-driven development, like Jest, Jasmine, Mocha, QUnit, Karma, Cypress, and others.
+how to install mocha ?
+what to add in test script ?
+What is mocha RUN cycle ?
+How to execute async & sync code in mocha ?
+Ways of handling Async in Mocha ?
+what is done() ? Double done () possible ?
+what is chai as promise ?
+what is Hooks ? & called when?
+What is Pednding test cases ? Skip test cases ?
+What is exclusive Test () & Inclusive Test ();
+What is retry cases () ?
+What is Suite ? Test Suit ?
+
+What is jasmine ? - BDD
+Jasmine installation ?
+why jasmine is different ?
+can be clubbed with others ?
+What is Spies & use ?
+What are matchers / N custom matchers ?
+
+ 
+
+
+
+
+
+
+
+
+URLs
+https://www.swtestacademy.com/node-js-unit-testing-with-mocha/
+https://testingbasicinterviewquestions.blogspot.com/2012/01/what-is-unit-testing-explain-it-with.html
+
+https://www.interviewmocha.com/candidate-tests-sample-interview-questions
+
+https://www.katalon.com/resources-center/blog/web-api-testing-interview-questions/
+
+https://www.onlineinterviewquestions.com/javascript/
+
+https://www.code-sample.com/2018/05/angular-7-6-5-testing-questions-and.html
+https://howtodoinjava.com/javascript/jasmine-unit-testing-tutorial/
+
