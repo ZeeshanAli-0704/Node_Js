@@ -1,0 +1,90 @@
+Engines - 
+Chrome : V8 Engine
+Firefox has SpiderMonkey
+Safari has JavaScriptCore (also called Nitro)
+Edge has Chakra
+
+Advantages of Node js.
+1) to be used for data insentive application
+2) open source, Async, single threaded, fast, no waiting 
+3) resource are used less...
+4) process request via event loop machanism
+5)
+
+
+NPM 
+1) node package manager
+2) host of packages / libraries
+3) core modules installed when installing node js
+4) 
+
+
+Javascript Compilation - 
+Compilation
+JavaScript is generally considered an interpreted language, but modern JavaScript engines no longer just interpret JavaScript, they compile it.
+This has been happening since 2009, when the SpiderMonkey JavaScript compiler was added to Firefox 3.5, and everyone followed this idea.
+JavaScript is internally compiled by V8 with just-in-time (JIT) compilation to speed up the execution.
+This might seem counter-intuitive, but since the introduction of Google Maps in 2004, JavaScript has evolved from a language that was generally executing a few dozens of lines of code to complete applications with thousands to hundreds of thousands of lines running in the browser.
+Our applications now can run for hours inside a browser, rather than being just a few form validation rules or simple scripts.
+In this new world, compiling JavaScript makes perfect sense because while it might take a little bit more to have the JavaScript ready, once done it's going to be much more performant than purely interpreted code.
+
+
+REPL :
+REPL also known as Read Evaluate Print Loop is a programming language environment(Basically a console window) that takes single expression as user input and returns the result back to the console after execution.
+
+The _ special variable
+If after some code you type _, that is going to print the result of the last operation.
+
+
+
+Node.js, accept arguments from the command line
+
+You can pass any number of arguments when invoking a Node.js application using
+node app.js
+Arguments can be standalone or have a key and a value.
+For example:
+node app.js joe
+or
+node app.js name=joe
+
+This changes how you will retrieve this value in the Node.js code.
+The way you retrieve it is using the process object built into Node.js.
+It exposes an argv property, which is an array that contains all the command line invocation arguments.
+
+The first element is the full path of the node command.
+The second element is the full path of the file being executed.
+All the additional arguments are present from the third position going forward.
+
+Node js File system & funtion ?
+
+Create server in Node.js
+ 
+ 
+ Event in Node js.
+ 
+ Two method to remember emit() & on()
+ 
+ EventEmitter.on() // Event Listener
+ EventEmitter.emit() // Event Trigger
+ 
+ 
+ Express.js
+ 
+
+
+
+
+
+
+Urls:
+
+
+
+
+
+
+
+
+https://nodejs.dev/learn/differences-between-nodejs-and-the-browser
+
+Chrome : V8 Engine
