@@ -79,6 +79,11 @@ Introducing AMD
 
  What is JADE ?
  
+ Mustache.js	Without the custom helpers offered by Handlebars.js, this templating engine is simple and lightweight, and it compiles for many languages other than JavaScript (https://mustache.github.io/).
+Handlebars.js	Functionally similar to EJS, this templating engine focuses on the use of curly brackets, or handlebars, for inserting dynamic content into your views (http://handlebarsjs.com/).
+Underscore.js	In addition to other JavaScript functions and libraries, this engine offers templating with customizable syntax and symbols (http://underscorejs.org/).
+Pug.js	This engine offers syntax similar to Jade in Ruby, abbreviating HTML tag names for simplicity, and is indentation-sensitive (https://pugjs.org).
+ 
  
 
 
