@@ -79,6 +79,18 @@ The expect interface provides a function as a starting point for chaining your l
 
 The should interface extends Object.prototype to provide a single getter as the starting point for your language assertions. It works on node.js and in all modern browsers except Internet Explorer.
 
+
+
+
+
+Shallow / Render / Mount
+
+While shallow() only renders the component without the content of child components, mount() renders all child components as well. It renders the whole component hierarchy. While the former is used for component tests in isolation (unit tests, lightweight integration), the latter is used for real integration tests. Integration tests are more likely to break, because they include all the children and logic of your component tree. Thus the maintenance costs are higher for integration tests. People are saying it's more expensive to write and maintain those tests than unit tests. Last but not least, the third function to render your React components with Enzyme is called render(). It is similar to mount(), because it renders all child components. But from a performance point of view, it is less expensive than mount(), because it doesn't run the lifecycle methods of your component. So if you need access to child components but are not interested in lifecycle methods, you can use render() instead of mount().
+
+
+https://stackabuse.com/using-mocks-for-testing-in-javascript-with-sinon-js/
+
+
 URLs:
 
 https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai
