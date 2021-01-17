@@ -142,8 +142,7 @@ and many others exist as well.
 - Explain Error Handling in node js?
 - Explain the terms body-parser, cookie-parser, debug, jade, morgan, nodemon, pm2, serve-favicon, cors in Express JS?
 - In which Language Node Js is written ?
-
-- 
+- What is Model & router when building node js application? 
 
 
 
