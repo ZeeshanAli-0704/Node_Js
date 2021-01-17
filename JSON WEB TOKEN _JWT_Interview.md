@@ -147,3 +147,8 @@ Before we actually get to implementing JWT, let’s cover some best practices to
 - Explain Ways to invalidate JWT?
 - Which npm package to install in order to use JWT?
 - What is a Hashing function?
+
+
+Study Url: 
+https://www.freecodecamp.org/news/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52/
+https://hackernoon.com/restful-api-design-with-node-js-26ccf66eab09
