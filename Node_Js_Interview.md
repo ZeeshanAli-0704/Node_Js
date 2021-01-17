@@ -84,6 +84,7 @@ and many others exist as well.
  - Is Node.js really Single-Threaded?
  - What is Node.js Process Model?
  - Explain Event Model ?
+ - Difference between Node js Event loop & Javascript Event loop?
  - What is Event loop in Node.js? And How does it work?
  - What is the difference between Blocking and Non-blocking?
  - What is the difference between Asynchronous and Synchronus ?
@@ -105,17 +106,21 @@ and many others exist as well.
  - Difference between Events and Callbacks?
  - What is an error-first callback?
  - What is callback hell in Node.js?
+ - What is callback hell, and how can it be avoided?
+ - What are the pros and cons of using promises instead of callbacks?
  - What are Promises in Node.js?
  - What is REPL? What purpose it is used for?
  - How to Debug Node Js Application ?
- - What is nodeman? How to configure ?
+ - What is nodemon? How to configure ?
  - How does Node.js handle child threads?
  - What is fork & child Process ?
+ - What is the difference between the node js child process and clusters?
  - What does emitter do and what is dispatcher?
 - How to kill child processes that spawn their own child processes in Node.js?
 - What do you mean by Reactor Pattern in Node.js?
 - What are the key features of Node.js?
 - What are globals in Node.js?
+- What is Piping in Node JS?
 - What is chaining process in Node.js?
 - What is a control flow function? what are the steps does it execute?
  - What is the difference between Node.js vs Ajax?
@@ -136,6 +141,7 @@ and many others exist as well.
 - What is `libuv`?
 - What is the use of DNS module in Node.js?
 - What is the passport in Node.js?
+- How does Passport handle authorization?
 - What is Mongoose ?
 - How to create Table Model in Node.js?
 - How to connect with External DB like MONGODB & NOSQL?
@@ -143,6 +149,15 @@ and many others exist as well.
 - Explain the terms body-parser, cookie-parser, debug, jade, morgan, nodemon, pm2, serve-favicon, cors in Express JS?
 - In which Language Node Js is written ?
 - What is Model & router when building node js application? 
+- 10 Best NodeJS Frameworks for Developers :  `Hapi.js
+Express.js
+Koa.js.
+Sails.js.
+Meteor.js.
+Derby.js.
+Total.js.
+Adonis.js.`[Hacker IO Blog](https://hackr.io/blog/nodejs-frameworks)
+- How to use Async Await with promises in node js?
 
 
 
